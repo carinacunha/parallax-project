@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+html{
+/* porcentagem do tamanho da fonte com relaçnao a fonte do navegador */
+font-size: 72.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    overflow-wrap:break-word;
+    font-family: 'Oxygen', sans-serif;
+    color: #2E3440;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto; /* 0 em cima e em baixo e o mesmo tamanho para a esquerda e direita*/
+
+}
+
+main{
+    display: block;
+    background: white;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20 px;
+}
+
+
+section.module p{
+    margin-bottom: 40px;
+}
+
+section.module:last-child{
+    margin-bottom: 0;
+}
+
+section.module h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module.content{
+    padding: 40px 0;
+    background: #eaecee;
+}
+
+section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; /*imagem não se repete ao longo da seção*/
+    background-attachment: fixed; /*imagem ocupa o tamanho todo do portraitview de forma fixa, cria o efeito parallax*/
+    background-size: cover; 
+    -webkit-background-size: cover; /*configurações do background irá se aplicar em outros navegadores*/
+    -moz-backgroung-size: cover;
+}
+
+/*criando o efeito de sombra na imagem*/
+section.module.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
+}
+
+
+section.module.parallax-1{
+    background-image: url("bird.jpg");
+}
+
+section.module.parallax-2{
+    background-image: url("elephant.jpg");
+}
+
+section.module.parallax-3{
+    background-image: url("jaguar.jpg");
+}
+
+section.module.parallax h1{
+    color: white;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
+}
